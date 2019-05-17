@@ -3,7 +3,7 @@ from pdf2image import convert_from_bytes
 import io
 from itertools import chain
 
-from yandex_ocr_request_func import get_yandex_cloud_ocr_response
+from yandex_ocr_request import get_yandex_cloud_ocr_response
 from ocr_funcs import ocr_buhuchet
 from crop import crop_frames
 

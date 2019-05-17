@@ -5,16 +5,19 @@ imgByteArr = io.BytesIO()
 image.save(imgByteArr, format='PNG')
 resp = get_yandex_cloud_ocr_response(imgByteArr.getvalue())
 
-#Модуль ocr_funcs
+# Модуль ocr_funcs
 ocr_buhuchet(image)
+
 Принимает на вход картинку (страницу) и возвращает распознанные коды с датами
 Картинка должна быть в формате массива Numpy
 
-#Модуль crop
+# Модуль crop
 crop_frames(image)
+
 Принимает на вход картинку (объект класса Image из библиотеки PIL (Pillow)) и обрезает пустые края страницы (нужно, чтобы яндекс лучше распознавал)
 
-#Модуль yandex_ocr_request
+# Модуль yandex_ocr_request
 get_yandex_cloud_ocr_response(image_data)
+
 Принимает на вход картинку (страницу) и возвращает ответ от яндекса с распознанным текстом и координатами
 Картинка должна быть в формате массива Numpy

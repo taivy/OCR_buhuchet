@@ -1,16 +1,16 @@
 # Получение массива NumPy из картинки
 Получить массив Numpy из картинки можно с помощью загрузки через cv2:
 
-img = cv2.imread(imgfile)
+```img = cv2.imread(imgfile)```
 
 Либо через загрузив в io.BytesIO() объект класса Image из библиотеки PIL (Pillow):
 
+```
+import io
 imgByteArr = io.BytesIO()
-
 image.save(imgByteArr, format='PNG')
-
 resp = get_yandex_cloud_ocr_response(imgByteArr.getvalue())
-
+```
 
 # Получение результата для pdf файлов
 Получить объекты Image из страниц с помощью функции convert_from_bytes из библиотеки pdf2image, получить и объединить результаты
